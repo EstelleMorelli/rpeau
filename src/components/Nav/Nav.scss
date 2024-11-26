@@ -1,0 +1,132 @@
+@use '../../styles/variables' as v;
+
+.Nav--mobile {
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+    background-color: v.$color-white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav--logo {
+    width: 200px;
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+.Nav--menu {
+    margin: auto 2rem;
+    color: v.$color-grey;
+}
+.Nav--desktop{
+    display: none;
+}
+.Nav--sidebar * {
+    background-color: v.$color-blue !important;
+}
+.Nav--sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 57%; // Largeur de la barre latérale
+    height: 100%;
+    background-color: v.$color-blue;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: right 0.3s ease;
+    z-index: 3;
+
+    &.open {
+        right: 0; // Passe à l'écran
+    }
+}
+
+.Nav--sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+.Nav--sidebar-links {
+    height: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Nav--sidebar-links__cat1, .Nav--sidebar-links__cat2 {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.Nav--sidebar-links__cat1 {
+    font-size: x-large;
+}
+.Nav--sidebar-links__cat2 {
+    font-size: large;
+}
+
+.Nav--item__mobile {
+    margin: 1rem 0;
+    text-decoration: none;
+    color: v.$color-white;
+    border-radius: 5px;
+    text-align: left;
+
+    &:hover {
+        color: v.$color-orange;
+    }
+}
+
+.Nav--close {
+    cursor: pointer;
+    color: v.$color-white;
+    margin: 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .Nav--logo {
+        margin: 0rem 1rem 0rem 2rem;
+        padding: 0.5rem;
+    }
+    .Nav--mobile, .Nav--sidebar{
+        display: none;
+    }
+    .Nav--desktop {
+        position: sticky;
+        width: 100vw;
+        top: 0;
+        z-index: 2;
+        background-color: v.$color-white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .Nav--logoandtitle{
+        display: flex;
+    }
+    .Nav--title {
+        color: white;
+        margin: auto 0rem;
+    }
+    nav {
+     margin: auto 1rem;
+     align-self: flex-end;
+
+    }
+    .Nav--item {
+        margin: auto 1rem;
+        text-decoration: none;
+        color: v.$color-grey;
+        padding: 1rem;
+        font-size: x-large;
+
+    }
+    nav .active {
+        color: v.$color-blue;
+    }
+}

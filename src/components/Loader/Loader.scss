@@ -1,0 +1,71 @@
+@use '../../styles/variables' as v;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: v.$color-white;
+
+}
+
+body .Loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.Loader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotation 30s;
+}
+.drop {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 61% 39% 38% 62% / 34% 54% 46% 66%;
+    box-shadow: inset 10px 10px 10px 10px rgba(0,0,0,0.05), 15px 25px 10px rgba(0,0,0,0.1), 15px 20px 20px rgba(0,0,0,0.05), inset -10px -10px 15px rgba(255,255,255,0.9);
+}
+.drop::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 38% 62% 62% 38% / 34% 47% 53% 66%;
+}
+
+.drop::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 63% 37% 35% 65% / 44% 35% 65% 56%;
+}
+
+.drop:nth-child(2){
+    transform: scale(0.5) translate(-200px,180px);
+    border-radius: 63% 37% 67% 33% / 31% 35% 65% 69%;
+}
+
+.drop:nth-child(3){
+    transform: scale(0.5) translate(280px,10px);
+    border-radius: 63% 37% 24% 33% / 31% 35% 65% 69%;
+}
+.drop:nth-child(4){
+    transform: scale(0.35) translate(180px,-350px);
+    border-radius: 63% 37% 67% 33% / 31% 35% 65% 69%;
+}
+
+@keyframes rotation {
+    from {transform:rotate(0deg);}
+    to {transform: rotate(2160deg);}
+}
