@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-
+import './index.scss';
 /*
 -- BrowserRouter --
 https://reactrouter.com/docs/en/v6/api#browserrouter
@@ -28,9 +28,8 @@ const App = lazy(() =>
     setTimeout(() => resolve(import('./components/App/App')), 3000)
   )
 );
-// const firstLoader = document.getElementById('firstLoader');
-// On injecte notre application dans le DOM
 
+// On injecte notre application dans le DOM
 root.render(
   <Suspense fallback={<Loader />}>
     <Provider store={store}>

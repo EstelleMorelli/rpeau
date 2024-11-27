@@ -1,10 +1,11 @@
 import './Home.scss';
+import Intro from './Intro/Intro';
 
 function Home() {
 
   return (
     <div className="Home">
-        <h1>Artisan pompes de relevage </h1>
+      <Intro />
     </div>
   );
 }

@@ -1,1 +1,42 @@
-@use '../../styles/variables' as v;
+@use '../../../styles/variables' as v;
+
+.Intro--maintitle {
+    background-color: rgba(v.$color-grey,0.1);
+    color: v.$color-orange;
+    font-size: x-large;
+    padding: 1rem;
+    font-style: italic;
+    //-webkit-text-stroke: 0.1px black;
+}
+
+.Intro--subtitle {
+    color: v.$color-blue;
+    padding: 1rem;
+    font-size: large;
+}
+
+.Intro--text {
+    color: v.$color-grey;
+    text-align: center;
+    font-size: large;
+}
+.Intro--contact {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px v.$color-orange;
+    border-radius: 1rem;
+    max-width: 50%;
+    margin: 1.5rem auto;
+    a {
+        text-decoration: none;
+        color: v.$color-orange;
+        font-weight: 700;
+        margin: auto;
+        font-size: large;
+    }
+}
+.contact--phone__logo {
+    color: v.$color-grey;
+
+}

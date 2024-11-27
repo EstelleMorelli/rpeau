@@ -74,10 +74,6 @@
     color: v.$color-white;
     border-radius: 5px;
     text-align: left;
-
-    &:hover {
-        color: v.$color-orange;
-    }
 }
 
 .Nav--close {
@@ -85,8 +81,6 @@
     color: v.$color-white;
     margin: 1rem;
 }
-
-
 
 @media (min-width: 768px) {
     .Nav--logo {
