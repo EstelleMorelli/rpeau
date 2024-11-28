@@ -5,6 +5,7 @@ import Loader from '../Loader/Loader';
 import { useAppSelector } from '../../store/hooks-redux';
 import Home from '../Home/Home';
 import Nav from '../Nav/Nav';
+import ContactForm from '../ContactForm/ContactForm';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
       </>
     }

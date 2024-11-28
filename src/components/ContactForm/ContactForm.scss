@@ -1,1 +1,63 @@
 @use '../../styles/variables' as v;
+
+.Contact--maintitle{
+    color: v.$color-orange;
+    text-align: center;
+    font-size: x-large;
+}
+
+.Contact--text{
+    color: v.$color-grey;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-weight: 500;
+    font-size: large;
+}
+
+.ContactForm {
+    background-color: v.$color-orange;
+
+}
+.ContactForm--wrapper,
+.ContactForm .form-group,
+.ContactForm label{
+    background-color: inherit; /* Hérite de .ContactForm */
+}
+.ContactForm .form-group{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem 1rem 0rem 1rem;
+    margin: auto;
+}
+.ContactForm label {
+    color: v.$color-white;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.ContactForm input {
+    height: 2rem;
+    border: none;
+}
+
+.ContactForm--wrapper{
+    padding-bottom: 1rem;
+}
+.form-group__button {
+    width: 100%;
+    background-color: v.$color-white;
+    display: flex;
+    width: 100%;
+
+}
+.ContactForm button{
+    background-color: v.$color-orange;
+    color: v.$color-white;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    margin: 1rem auto;
+}
