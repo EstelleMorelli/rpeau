@@ -32,6 +32,13 @@ function Nav() {
                     </NavLink>
                     <NavLink
                         className="Nav--item__mobile"
+                        to="/apropos"
+                        onClick={toggleSidebar}
+                    >
+                        A propos
+                    </NavLink>
+                    <NavLink
+                        className="Nav--item__mobile"
                         to="/services"
                         onClick={toggleSidebar}
                     >
@@ -80,6 +87,12 @@ function Nav() {
                         to="/"
                     >
                         Accueil
+                    </NavLink>
+                    <NavLink
+                        className="Nav--item"
+                        to="/apropos"
+                    >
+                        A propos
                     </NavLink>
                     <NavLink
                         className="Nav--item"

@@ -6,6 +6,9 @@ import { useAppSelector } from '../../store/hooks-redux';
 import Home from '../Home/Home';
 import Nav from '../Nav/Nav';
 import ContactForm from '../ContactForm/ContactForm';
+import Maintenance from '../Maintenance/Maintenance';
+import Services from '../Home/Services/Services';
+import Footer from '../Footer/Footer';
 
 function App() {
 
@@ -18,6 +21,9 @@ function App() {
     <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/apropos" element={<><Maintenance /> <Footer/></>} />
+        <Route path="/services" element={<><Services /> <Footer/></>} />
+        <Route path="/projets" element={<><Maintenance /> <Footer/></>} />
         <Route path="/contact" element={<ContactForm />} />
       </Routes>
       </>

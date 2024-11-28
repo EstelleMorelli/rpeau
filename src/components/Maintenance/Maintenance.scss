@@ -1,0 +1,43 @@
+@use '../../styles/variables' as v;
+
+.Maintenance{
+    height: 75vh;
+}
+
+.Maintenance--maintitle{
+    color: v.$color-orange;
+    text-align: center;
+    font-size: x-large;
+    margin: 0rem 1rem 1rem 1rem;
+}
+.Maintenance--logo__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.Maintenance--logo{
+    width: 300px;
+    margin: auto;
+}
+
+.Maintenance--text{
+    color: v.$color-grey;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-weight: 500;
+    font-size: large;
+}
+
+.BackToHomeLink {
+    text-decoration: none;
+    color: v.$color-white;
+    font-weight: 800;
+    font-size: medium;
+    padding: 1rem;
+    background-color: v.$color-orange;
+    display: inline-block; // Empêche le bouton de s'étendre sur toute la ligne
+    margin: 0 2rem; // Centre le bouton horizontalement si nécessaire
+    text-align: center; // Centre le texte à l'intérieur du bouton
+}
