@@ -1,5 +1,9 @@
 @use '../../../styles/variables' as v;
 
+.Intro {
+    height: 90vh;
+}
+
 .Intro--maintitle {
     background-color: rgba(v.$color-grey,0.1);
     color: v.$color-orange;

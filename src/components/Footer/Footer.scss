@@ -1,1 +1,26 @@
 @use '../../styles/variables' as v;
+
+.Footer {
+    z-index: 2;
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    height: 5.5rem;
+}
+
+.Footer--maintitle {
+    color: v.$color-orange;
+    text-align: center;
+    font-weight: 600;
+    padding: 0rem 0rem 0.5rem 0rem;
+}
+.Footer--icon__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid v.$color-grey 1px;
+}
+.Footer--icon {
+    color: v.$color-grey;
+    margin: 0.3rem;
+}

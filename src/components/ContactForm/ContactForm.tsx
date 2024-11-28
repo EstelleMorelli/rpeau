@@ -125,7 +125,7 @@ function ContactForm() {
             {/* CHAMP POUR LE MESSAGE PERSONNALISE*/}
               <div className='form-group'>
                   <label>Message</label>
-                  <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
+                  <textarea name="message" rows={7} value={formData.message} onChange={handleChange}></textarea>
               </div>
         </div>
         <div className='form-group__button'>
