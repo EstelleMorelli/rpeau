@@ -1,1 +1,35 @@
-@use '../../styles/variables' as v;
+@use '../../../styles/variables' as v;
+
+.Services {
+    color: v.$color-blue;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.Services section{
+    margin: 1rem 1.5rem;
+}
+.Services--subtitle{
+    margin-top: 1rem;
+    padding: 0.3rem;
+    font-size: large;
+}
+.Service--logo{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+
+}   
+
+.Service--logo__circle{
+    display: flex; /* Centrer l'icône dans le cercle */
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Ajustez la taille du cercle */
+    height: 100px; /* Ajustez la taille du cercle */
+    border-radius: 50%; /* Rendre le conteneur circulaire */
+    background-color: white; /* Couleur de fond */
+    box-shadow: 0px 4px 6px rgba(v.$color-grey,0.6); /* Ombre douce */
+    padding: 10px; /* Espace entre l'image et le bord du cercle */
+    margin: auto;
+}
