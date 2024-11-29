@@ -9,9 +9,12 @@ import ContactForm from '../ContactForm/ContactForm';
 import Maintenance from '../Maintenance/Maintenance';
 import Services from '../Home/Services/Services';
 import Footer from '../Footer/Footer';
+import CGU from '../CGU/CGU';
+import LoginForm from '../LoginForm/LoginForm';
+import Admin from '../Admin/Admin';
 
 function App() {
-
+  const connectedUser = useAppSelector((state) => state.appReducer.connectedUser);
   const isLoading = useAppSelector((state)=> state.appReducer.isLoading);
   return (
    <div className="App">
@@ -21,10 +24,14 @@ function App() {
     <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Home />} />
         <Route path="/apropos" element={<><Maintenance /> <Footer/></>} />
         <Route path="/services" element={<><Services /> <Footer/></>} />
         <Route path="/projets" element={<><Maintenance /> <Footer/></>} />
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/mentions-legales" element={<CGU />} />
+        <Route path="/connexion" element={<LoginForm />} />
+        {connectedUser &&  <Route path="/admin" element={<Admin />} />}
       </Routes>
       </>
     }
@@ -32,4 +39,4 @@ function App() {
   );
 
 }
-export default App
+export default App;

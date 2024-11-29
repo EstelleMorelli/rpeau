@@ -69,7 +69,7 @@ function Nav() {
                     </NavLink>
                     <NavLink
                         className="Nav--item__mobile"
-                        to="/admin"
+                        to="/connexion"
                         onClick={toggleSidebar}
                     >
                         Espace administrateur

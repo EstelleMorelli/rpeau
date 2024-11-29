@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './ContactForm.scss';
-import { useAppDispatch } from '../../store/hooks-redux';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 function ContactForm() {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
@@ -24,10 +22,17 @@ function ContactForm() {
     message: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+  
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
+    });
   };
+  
 
   const validateForm = () => {
     const newErrors = {
@@ -57,7 +62,7 @@ function ContactForm() {
   return !hasErrors; // Retourne true si aucune erreur n'est détectée
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();;
     if (!validateForm()) return;
     const sendFirstEmail = emailjs.send(
