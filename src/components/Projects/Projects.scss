@@ -1,0 +1,21 @@
+@use '../../styles/variables' as v;
+
+.Projects--maintitle{
+    color: v.$color-blue;
+    text-align: center;
+    margin: 3rem 0rem 0rem 0rem;
+}
+
+.Projects--images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .Projects--image {
+    width: 200px;
+    max-width: 50%;
+    height: 200px;
+    object-fit: cover;
+  }
+  

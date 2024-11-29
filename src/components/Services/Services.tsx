@@ -1,8 +1,8 @@
 import './Services.scss';
-import service1 from '../../../../public/images/service1.png'; 
-import service2 from '../../../../public/images/service2.png'; 
-import service3 from '../../../../public/images/service3.png'; 
-import service4 from '../../../../public/images/service4.png'; 
+import service1 from '../../../public/images/services/service1.png'; 
+import service2 from '../../../public/images/services/service2.png'; 
+import service3 from '../../../public/images/services/service3.png'; 
+import service4 from '../../../public/images/services/service4.png'; 
 function Services() {
 
   return (
