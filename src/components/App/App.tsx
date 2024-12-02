@@ -12,6 +12,8 @@ import Footer from '../Footer/Footer';
 import CGU from '../CGU/CGU';
 import LoginForm from '../LoginForm/LoginForm';
 import Admin from '../Admin/Admin';
+import ProjectsGallery from '../Projects/ProjectsGallery/ProjectsGallery';
+import ProjectsGallery2 from '../Projects/ProjectsGallery2/ProjectsGallery2';
 
 function App() {
   const connectedUser = useAppSelector((state) => state.appReducer.connectedUser);
@@ -27,7 +29,8 @@ function App() {
         <Route path="/*" element={<Home />} />
         <Route path="/apropos" element={<><Maintenance /> <Footer/></>} />
         <Route path="/services" element={<><Services /> <Footer/></>} />
-        <Route path="/projets" element={<><Maintenance /> <Footer/></>} />
+        <Route path="/projets" element={<><ProjectsGallery /> <Footer/></>} />
+        <Route path="/projets2" element={<><ProjectsGallery2 /> <Footer/></>} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/mentions-legales" element={<CGU />} />
         <Route path="/connexion" element={<LoginForm />} />
