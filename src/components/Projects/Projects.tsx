@@ -11,7 +11,7 @@ return (
         {projectsImagesArray.slice(0,6).map((imagePath, index) => (
           <img
             key={index}
-            src={imagePath.replace('/src/assets', '../../../public/images')} // Adapter le chemin pour la balise <img>
+            src={imagePath.replace('/src/assets', './images')} // Adapter le chemin pour la balise <img>
             alt={`Projet ${index + 1}`}
             className="Projects--image"
           />

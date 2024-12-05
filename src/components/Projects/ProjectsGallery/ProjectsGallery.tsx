@@ -29,7 +29,7 @@ function ProjectsGallery() {
             <div className='grid'>
                 {ProjectsGalleryImagesArray.map((imagePath, index) => ( 
                     <div className="grid-item" key={index}>
-                    <img key={index} src={imagePath.replace('/src/assets', '../../../../public/images')} // Adapter le chemin pour la balise <img> 
+                    <img key={index} src={imagePath.replace('/src/assets', './images')} // Adapter le chemin pour la balise <img> 
                     alt={`Projet ${index + 1}`}
                     className="grid-img"
                     onClick={handleProjectsGalleryImageClick} 
