@@ -15,7 +15,7 @@ function Nav() {
         <>
             <div className="Nav--mobile">
                 <img className="Nav--logo" src={logo} alt="Logo" />
-                <Menu className="Nav--menu" size={60} onClick={toggleSidebar} />
+                <Menu className="Nav--menu" size={40} onClick={toggleSidebar} />
             </div>
             <div className={`Nav--sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div className="Nav--sidebar-header">

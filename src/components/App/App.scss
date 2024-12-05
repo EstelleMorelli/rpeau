@@ -1,1 +1,17 @@
 @use '../../styles/variables' as v;
+
+.scrollupbutton {
+    background: none;
+    background-color: none;
+    border: none;
+    position: fixed;
+    top: 85vh;
+    left: 1vw;
+    opacity: 0.7;
+    z-index: 3;
+  }
+
+  .scrollupbutton--logo {
+    background: none;
+    color: v.$color-grey;
+  }

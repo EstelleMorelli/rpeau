@@ -1,21 +1,44 @@
 @use '../../styles/variables' as v;
 
 .Projects--maintitle{
-    color: v.$color-blue;
+    color: v.$color-orange;
     text-align: center;
-    margin: 3rem 0rem 0rem 0rem;
+    margin: 3rem 0rem 1rem 0rem;
 }
 
 .Projects--images {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 4px;
+    justify-content: center;
   }
   
-  .Projects--image {
-    width: 200px;
-    max-width: 50%;
-    height: 200px;
-    object-fit: cover;
+.Projects--image {
+  width: 200px;
+  max-width: 49%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.SeeMoreBtn {
+  width: 250px;
+  display: block;
+  justify-self: center;
+  background-color: v.$color-blue;
+  color: v.$color-white;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem auto;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .Projects--images {
+    margin: auto;
+    gap: 5px;
   }
-  
+    .Projects--image {
+    width: 900px;
+    max-width: 33%;
+  }
+}

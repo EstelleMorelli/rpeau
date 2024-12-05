@@ -1,0 +1,65 @@
+@use '../../styles/variables' as v;
+
+.About {
+    padding: 0rem 1rem 1rem 1rem;
+    text-align: justify;
+    line-height: 1.2;
+}
+.About--list1, .About--list2 {
+    list-style: none;
+    padding: 0rem;
+}
+
+.About--list1 li::before{
+    content: "• "; 
+    color: v.$color-blue;
+    font-size: larger;
+}
+
+.About--list2 li::before{
+    content: "• "; 
+    color: v.$color-orange;
+    font-size: larger;
+    padding: 0rem;
+}
+
+.About--maintitle {
+    color: v.$color-blue;
+    text-align: center;
+    margin: 0rem 0rem 1rem 0rem;
+}
+.About--subtitle1{
+    color: v.$color-blue;
+}
+.About--subtitle2{
+    color: v.$color-orange;
+}
+.About--subtitle1, .About--subtitle2{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+.About h4 {
+    padding-top: 0.5rem;
+}
+
+.About strong{
+    color: v.$color-blue;
+    display: inline-block;
+    margin: 0.5rem;
+    
+}
+.About--endphrase {
+    color: v.$color-orange;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .About {
+        margin: auto;
+        width: 40%;
+    }
+}

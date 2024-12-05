@@ -1,9 +1,10 @@
 @use '../../../styles/variables' as v;
 
 .Intro--maintitle {
+    font-family: v.$font-h1;
     background-color: rgba(v.$color-grey,0.1);
     color: v.$color-orange;
-    font-size: x-large;
+    font-size: xx-large;
     padding: 1rem;
     font-style: italic;
     text-align: center;
@@ -77,5 +78,8 @@
  .Presentation--picture {
     max-width: 20vw;
     object-fit: cover;
+}
+.Intro--contact {
+    width: 15rem;
 }
 }

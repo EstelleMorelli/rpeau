@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../utils/axios";
+import { AxiosError } from "axios"; // Importer AxiosError
 
 interface Props {
     email: string;
@@ -15,8 +16,13 @@ const login = createAsyncThunk(
             const response = await axiosInstance.post('/login', { email, password });
             return response.data; // Retourner les données en cas de succès
         } catch (error) {
-            // Gérer les erreurs en les rejetant avec une valeur
-            return rejectWithValue(error.response?.data || error.message);
+            // Vérification si l'erreur est une instance d'AxiosError
+            if (error instanceof AxiosError) {
+                // Gérer les erreurs d'API avec la réponse ou message
+                return rejectWithValue(error.response?.data || error.message);
+            }
+            // Gérer les erreurs génériques qui ne sont pas des AxiosError
+            return rejectWithValue("An unexpected error occurred.");
         }
     }
 );

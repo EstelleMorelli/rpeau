@@ -1,34 +1,121 @@
 @use '../../../styles/variables' as v;
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 50%;
-    max-width: 50%;
-    padding: 0 4px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    max-width: 100%;
-  }
+.ProjectsGallery {
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  position: relative;
+  //overflow: hidden;
+}
+.ProjectsGallery--maintitle{
+  color: v.$color-orange;
+  text-align: center;
+  margin: 0rem 0rem 1rem 0rem;
+}
 
-  .ProjectsGallery--image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-  }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 350px;
+  gap: 5px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-right: 1rem;
+  grid-auto-flow: dense;
+}
+.grid::-webkit-scrollbar{
+  width: 1px;
+  background-color: v.$color-white;
+}
 
-  @media (min-width: 768px) {
-    .ProjectsGallery--image {
-        width: 400px;
-        height: 400px;
-      }
+.grid::-webkit-scrollbar-thumb{
+  background-color: v.$color-grey;
+}
+
+.grid-item {
+  //overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.grid-img:hover {
+  transform: scale(1.2);
+}
+
+.Projects--popup__bg {
+  //overflow: hidden;
+  display: flex;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img {
+  max-width: 350px;
+}
+
+.Projects--popup__bg:active{
+  display: flex;
+}
+
+.Projects--popup__content {
+  max-width: 80%;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position : relative;
+}
+
+.Projects--popup__close {
+  color: v.$color-white;
+  border: v.$color-white solid 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2 ease;
+  & .logo{
+    background: none;
   }
+}
+
+.Projects--popup__close:hover {
+  background-color: v.$color-orange;
+}
+
+@media (min-width: 768px) {
+  .Projects--popup__image {
+  max-width: 700px;
+  max-height: 700px;
+  transition: transform 0.5s;
+}
+.Projects--popup__image:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2);
+}
+}

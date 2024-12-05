@@ -12,7 +12,7 @@ const LoginForm = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const errorLogin = useAppSelector((state) => state.appReducer.loginError);
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
     // C'est seulement ici qu'on interagit avec Redux

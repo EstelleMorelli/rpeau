@@ -5,7 +5,7 @@
     position: sticky;
     bottom: 0;
     width: 100vw;
-    height: 6rem;
+    height: 5.5rem;
 }
  
 .Footer--maintitle {
@@ -23,4 +23,15 @@
 .Footer--icon {
     color: v.$color-grey;
     margin: 0.3rem;
+}
+
+.Footer--conception a{
+    text-decoration: none;
+    color: v.$color-orange;
+    &:hover{
+        color: v.$color-blue;
+    }
+}
+.Footer--conception{
+    text-align: center;
 }
